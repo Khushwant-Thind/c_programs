@@ -1,7 +1,18 @@
 #include <stdio.h>
 
-/*Program replaces tabs with \t and backspace by \b and backlash by \\*/
+/*Program replaces tabs with \t and backspace by \b and backslash by \\*/
 
 int main(){
-printf("\\t \\b \\");
+
+int c;
+while((c=getchar())!= EOF){
+	if (c == '\t')
+		printf("\\t");
+	else if(c == '\b')
+		printf("\\b");
+	else if(c == '\\')
+		printf("\\");
+	else
+		putchar(c);
+} 
 }
